@@ -1,5 +1,5 @@
 -- Список разрешенных ключей
-local whitelist = loadstring(game:HttpGet('https://raw.githubusercontent.com/SellfC/tablehub/main/keyssellhubobfus.lua'))()
+local whitelist = loadstring(game:HttpGet('https://raw.githubusercontent.com/SellfC/Sell_Hub/main/keys.lua'))()
 
 -- Функция для проверки ключа в вайтлисте
 local function checkWhitelist(key)
