@@ -24,8 +24,8 @@ Window:Toggle("Auto Win", {}, function(state)
             if not Settings.Win then return end
 
             local args = {
-    [1] = "Area2",
-    [2] = 5
+    [1] = "Area3",
+    [2] = 1
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FightOver"):FireServer(unpack(args))
@@ -41,8 +41,8 @@ Window:Toggle("Auto WinSell", {}, function(state)
             if not Settings.WinSell then return end
 
             local args = {
-    [1] = "Area3",
-    [2] = 5
+    [1] = "Area4",
+    [2] = 4
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FightOver"):FireServer(unpack(args))
