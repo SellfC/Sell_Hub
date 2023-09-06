@@ -165,3 +165,8 @@ local Button = Tab:CreateButton({
       Rayfield:Destroy()
    end,
 })
+
+getgenv().Executed = true
+while getgenv().Executed and task.wait(210) do 
+   print("s")
+end
