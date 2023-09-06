@@ -21,35 +21,9 @@ local GameId = game.GameId
 local PlaceIds = {
 	["Ninjasim"] = { 13999740606 },
 	["Punchsim"] = { 14236123211 },
-	["BF"] = { 2753915549, 4442272183, 7449423635 },
-	["PJS"] = { 2142948266 },
-        ["AFS"] = {6299805723, 9141645420},
-	['AFSX'] = {4099570905},
-	['PEROXIDE'] = {3419284255},
-        ["AA"] = {10000000000},
 }
-if table.find(PlaceIds["AA"], GameId) then -- Anime Adventures
-	if getgenv().BetaScript then
-        LoadScript("AnimeAdventures-Rewrite.lua")
-	else
-	LoadScript("Anime%20Adventures.lua")
-	end
-elseif table.find(PlaceIds["Ninjasim"], Id) then -- RoGhoul
+    if table.find(PlaceIds["Ninjasim"], Id) then -- RoGhoul
 	LoadScript("Ninja.lua")
 elseif table.find(PlaceIds["Punchsim"], Id) then -- Blox Fruits
 	LoadScript("punchsim.lua")
-elseif table.find(PlaceIds["PJS"], GameId) then -- Project Slayer
-	LoadScript("PJS.lua")
-elseif table.find(PlaceIds["AFS"], Id) then -- Afs
-	if getgenv().BetaScript then
-	LoadScript("beta-afs.lua")
-	else
-	LoadScript("afsdupe.lua")
-	end
-elseif table.find(PlaceIds['PEROXIDE'], GameId) then -- AFSX
-	LoadScript("Peroxide.lua")
-elseif table.find(PlaceIds['AFSX'], GameId) then -- AFSX
-	LoadScript("AFSX.lua")
-else -- Astd
-	LoadScript("Astd.lua")
 end
