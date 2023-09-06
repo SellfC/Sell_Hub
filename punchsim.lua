@@ -1,55 +1,48 @@
 
-local ArrayField = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/ArrayField/main/Source.lua'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local Window = ArrayField:CreateWindow({
-   Name = "Sell_Hub",
-   LoadingTitle = "Script loading...",
-   LoadingSubtitle = "by sell.fr",
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = sellhub, -- Create a custom folder for your hub/game
-      FileName = "hub"
+      FolderName = GarouHub, -- Create a custom folder for your hub/game
+      FileName = "settings"
    },
    Discord = {
       Enabled = true,
       Invite = "https://discord.gg/TuGKKAweW4", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Sell_Hub",
-      Subtitle = "Key System",
-      Note = "key in discord server",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using ArrayField may overwrite your key file
+      Title = "GarouHub",
+      Subtitle = "Key System...",
+      Note = "Key in discrod https://discord.gg/TuGKKAweW4",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like ArrayField to get the key from
-      Actions = {
-            [1] = {
-                Text = 'Click here to copy the key link <--',
-                OnPress = function()
-                    setclipboard('https://discord.gg/TuGKKAweW4')
-                end,
-                }
-            },
-      Key = {loadstring(game:HttpGet('https://raw.githubusercontent.com/SellfC/Sell_Hub/main/key.lua'))()} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "https://raw.githubusercontent.com/SellfC/Sell_Hub/main/key.lua" -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
-Window:Prompt({
-    Title = 'Interface Prompt',
-    SubTitle = 'SubTitle',
-    Content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    Actions = {
-        Accept = {
-            Name = 'Accept',
-            Callback = function()
-                print('Pressed')
-            end,
-        }
-    }
+Rayfield:Notify({
+   Title = "Notification",
+   Content = "if you want, you can go to our discord server",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "copy link",
+         Callback = function()
+         setclipboard("https://discord.gg/TuGKKAweW4")
+      end
+   },
+},
 })
 
-local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("Section Example",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
 
@@ -93,7 +86,7 @@ local Toggle = Tab:CreateToggle({
 })
 
 local Toggle = Tab:CreateToggle({
-   Name = "Toggle Example",
+   Name = "Claim ugc1",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(enabled)
@@ -108,7 +101,7 @@ local Toggle = Tab:CreateToggle({
 })
 
 local Toggle = Tab:CreateToggle({
-   Name = "Toggle Example",
+   Name = "Claim ugc2",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
@@ -119,11 +112,12 @@ local Toggle = Tab:CreateToggle({
    end,
 })
 
+local Tab = Window:CreateTab("Eggs", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("Auto Egss",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
 
 local Toggle = Tab:CreateToggle({
-   Name = "Toggle Example",
+   Name = "Forest egg",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(enabled)
@@ -137,10 +131,12 @@ local Toggle = Tab:CreateToggle({
    end,
 })
 
+local Tab = Window:CreateTab("LastBosses", 4483362458) -- Title, Image
+
 local Section = Tab:CreateSection("Auto Boss (killfarm)",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
 
 local Toggle = Tab:CreateToggle({
-   Name = "Toggle Example",
+   Name = "BuffNoob Kill",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(enabled)
@@ -160,9 +156,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServe
 end
    end,
 })
-ArrayField:LoadConfiguration()
 
 getgenv().Executed = true
-while getgenv().Executed and task.wait(210) do 
+while getgenv().Executed and task.wait(1000000000000) do 
    print("s")
 end
