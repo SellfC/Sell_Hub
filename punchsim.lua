@@ -2,24 +2,24 @@
 local ArrayField = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/ArrayField/main/Source.lua'))()
 
 local Window = ArrayField:CreateWindow({
-   Name = "ArrayField Example Window",
-   LoadingTitle = "ArrayField Interface Suite",
-   LoadingSubtitle = "by Arrays",
+   Name = "Sell_Hub",
+   LoadingTitle = "Script loading...",
+   LoadingSubtitle = "by sell.fr",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = sellhub, -- Create a custom folder for your hub/game
-      FileName = "ArrayField"
+      FileName = "hub"
    },
    Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      Enabled = true,
+      Invite = "https://discord.gg/TuGKKAweW4", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
-   KeySystem = false, -- Set this to true to use our key system
+   KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Untitled",
+      Title = "Sell_Hub",
       Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided",
+      Note = "key in discord server",
       FileName = "Key", -- It is recommended to use something unique as other scripts using ArrayField may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like ArrayField to get the key from
@@ -27,11 +27,11 @@ local Window = ArrayField:CreateWindow({
             [1] = {
                 Text = 'Click here to copy the key link <--',
                 OnPress = function()
-                    print('Pressed')
+                    setclipboard('https://discord.gg/TuGKKAweW4')
                 end,
                 }
             },
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {loadstring(game:HttpGet('https://raw.githubusercontent.com/SellfC/Sell_Hub/main/key.lua'))()} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
