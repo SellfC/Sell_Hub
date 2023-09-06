@@ -2,9 +2,9 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Rayfield Example Window",
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
+   Name = "Garou_Hub",
+   LoadingTitle = "Script loading...",
+   LoadingSubtitle = "by sell.fr",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = GarouHub, -- Create a custom folder for your hub/game
