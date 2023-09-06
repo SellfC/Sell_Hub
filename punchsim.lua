@@ -170,14 +170,6 @@ print("button pressed")
 })
 
 local Button = Tab:CreateButton({
-   Name = "Redblue script",
-   Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubPunchingSimulator.lua", true))()
-print("button pressed")
-   end,
-})
-
-local Button = Tab:CreateButton({
    Name = "AntiAkf script",
    Callback = function()
 wait(0.5)local ba=Instance.new("ScreenGui")
