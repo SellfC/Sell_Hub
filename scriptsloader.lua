@@ -20,9 +20,9 @@ local Id = game.PlaceId
 local GameId = game.GameId
 local PlaceIds = {
 	["Ninjasim"] = { 13999740606 },
-	["Punchsim"] = { 14236123211 },
+	["ps"] = { 14236123211 },
 }
-if table.find(PlaceIds["Punchsim"], GameId) then -- Anime Adventures
+if table.find(PlaceIds["ps"], GameId) then -- Anime Adventures
 	if _G.new then
         LoadScript("newpunch.lua")
 	else
