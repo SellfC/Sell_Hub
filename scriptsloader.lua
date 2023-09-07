@@ -22,8 +22,12 @@ local PlaceIds = {
 	["Ninjasim"] = { 13999740606 },
 	["Punchsim"] = { 14236123211 },
 }
-    if table.find(PlaceIds["Ninjasim"], Id) then -- RoGhoul
-	LoadScript("Ninja.lua")
-elseif table.find(PlaceIds["Punchsim"], Id) then -- Blox Fruits
+if table.find(PlaceIds["Punchsim"], GameId) then -- Anime Adventures
+	if getgenv().uiv2 then
+        LoadScript("uiv2punch.lua")
+	else
 	LoadScript("punchsim.lua")
+	end
+elseif table.find(PlaceIds["Ninjasim"], Id) then -- RoGhoul
+	LoadScript("Ninja.lua")
 end
