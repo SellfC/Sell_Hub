@@ -23,7 +23,7 @@ local PlaceIds = {
 	["Punchsim"] = { 14236123211 },
 }
 if table.find(PlaceIds["Punchsim"], GameId) then -- Anime Adventures
-	if getgenv().uiv2 then
+	if getgenv().new then
         LoadScript("uiv2punch.lua")
 	else
 	LoadScript("punchsim.lua")
