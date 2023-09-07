@@ -147,7 +147,7 @@ end
     })
 
     Tabs.script:AddButton({
-        Title = "Redblue script",
+        Title = "AntiAfk script",
         Description = "Very important button",
         Callback = function()
 wait(0.5)local ba=Instance.new("ScreenGui")
