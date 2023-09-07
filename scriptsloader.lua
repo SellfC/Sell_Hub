@@ -13,7 +13,7 @@ local function LoadScript(ScriptName)
 			end
 			t = t + 1
 			wait(60)
-		until getgenv().Executed == true or t >= 30
+		until getgenv().Executed or t >= 30
 	end)
 end
 local Id = game.PlaceId
@@ -23,7 +23,7 @@ local PlaceIds = {
 	["Punchsim"] = { 14236123211 },
 }
 if table.find(PlaceIds["Punchsim"], GameId) then -- Anime Adventures
-	if getgenv().uiv2 then
+	if getgenv().new == true then
         LoadScript("uiv2punch.lua")
 	else
 	LoadScript("punchsim.lua")
