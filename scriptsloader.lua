@@ -23,11 +23,7 @@ local PlaceIds = {
 	["ps"] = { 14236123211 },
 }
 if table.find(PlaceIds["ps"], Id) then -- Anime Adventures
-	if getgenv().NewMenu then
         LoadScript("newpunch.lua")
-	else
-	LoadScript("punchsim.lua")
-	end
 elseif table.find(PlaceIds["Ninjasim"], Id) then -- RoGhoul
 	LoadScript("Ninja.lua")
 end
