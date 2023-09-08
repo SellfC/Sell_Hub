@@ -12,6 +12,19 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
+local function fireEggs(count, delay, arg)
+    local args = {
+      [1] = tostring(arg) 
+    }
+  
+    local remote = ReplicatedStorage.Events.PlayerPressedKeyOnEgg
+  
+    for i = 1, count do
+      remote:FireServer(unpack(args))
+      wait(delay) 
+    end
+end
+
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "mouse" }),
     eggs = Window:AddTab({ Title = "Eggs", Icon = "egg" }),
@@ -59,10 +72,10 @@ local Tabs = {
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "AutoPunch", Default = false })
 
     Toggle:OnChanged(function(enabled)
-        _G.pun = enabled
-      while _G.pun and task.wait() do 
-         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DamageIncreaseOnClickEvent"):FireServer()
-      end
+        _G.punch = enabled
+        while _G.punch and task.wait() do
+            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("DamageIncreaseOnClickEvent"):FireServer()
+        end
     end)
 
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "SkipFight", Default = false })
@@ -117,17 +130,164 @@ game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServe
 end
     end)
 
-    local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "AutoForestEgg", Default = false })
+    local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Gem Egg", Default = false })
 
-    Toggle:OnChanged(function(enabled)
-         _G.forest = enabled
+    Toggle:OnChanged(function(Value)
+        autoBreakGemEgg = Value
+    while autoBreakGemEgg and task.wait() do
+		local args = {
+			[1] = "VisitEgg"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Forest Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
       local args = {
         [1] = "1"  
       }
-      while _G.forest and task.wait() do
       game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
-        end
-    end)
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Desert Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "2"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Cave Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "3"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Ocean Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "4"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Candy Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "5"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Snow Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "6"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Toy Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "7"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Farm Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "8"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Samurai Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "9"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Space Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "10"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch Magic Forest Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "11"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
+
+local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch IDK Egg", Default = false })
+
+    Toggle:OnChanged(function(Value)
+        autoBreakEgg1 = Value
+    while autoBreakEgg1 and task.wait() do
+      local args = {
+        [1] = "12"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+end)
+
     Tabs.script:AddButton({
         Title = "ToraIsMe script",
         Description = "Very important button",
@@ -161,7 +321,7 @@ ca.TextSize=22;da.Parent=ca
 da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
 da.Size=UDim2.new(0,370,0,107)_b.Parent=da
 _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
-_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="."
 _b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
 ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
 ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
@@ -201,14 +361,15 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Fluent",
-    Content = "The script has been loaded.",
+    Title = "Script",
+    Content = "The script has been loaded!",
     Duration = 8
 })
 
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
+
 getgenv().Executed = true
 while getgenv().Executed and task.wait(1000000000000) do 
    print("s")
