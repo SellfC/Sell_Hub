@@ -12,6 +12,25 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService") 
+local VirtualInputManager = game:GetService("VirtualInputManager")
+
+local noobuser = Players.LocalPlayer
+
+local parts = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+
+local function autoClick(enabled, interval)
+  while enabled do
+    local x, y = 420, 420
+    VirtualInputManager:SendMouseButtonEvent(x, y, 0, false, game, 0)
+    VirtualInputManager:SendMouseButtonEvent(x, y, 0, true, game, 0)
+    
+    wait(interval)
+  end
+end
+
 local function fireEggs(count, delay, arg)
     local args = {
       [1] = tostring(arg) 
@@ -30,6 +49,8 @@ local Tabs = {
     eggs = Window:AddTab({ Title = "Eggs", Icon = "egg" }),
     boss = Window:AddTab({ Title = "Bosses", Icon = "minus-circle" }),
     script = Window:AddTab({ Title = "Another scripts", Icon = "code" }),
+    Teleport = Window:AddTab({ Title = "Teleports Zone", Icon = "antenna" }),
+    Beta = Window:AddTab({ Title = "Beta Functions pls dont use", Icon = "box" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
     Fluent:Notify({
@@ -111,7 +132,7 @@ local Tabs = {
       end
     end)
 
-    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "AutoBuffNoob", Default = false })
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Buff Noob", Default = false })
 
     Toggle:OnChanged(function(enabled)
         _G.BuffNoob = enabled
@@ -119,6 +140,234 @@ local Tabs = {
     [1] = "Fight",
     [2] = 1,
     [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Cowboy Noob", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+      _G.BuffNoob = enabled
+    local noobie = {
+  [1] = "Fight",
+  [2] = 2,
+  [3] = 4
+}
+local gemsss = {
+  [1] = "Gems",
+  [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+  end)
+
+  local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "TNT Guy", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+      _G.BuffNoob = enabled
+    local noobie = {
+  [1] = "Fight",
+  [2] = 3,
+  [3] = 4
+}
+local gemsss = {
+  [1] = "Gems",
+  [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+  end)
+
+  local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Shark Boss", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+      _G.BuffNoob = enabled
+    local noobie = {
+  [1] = "Fight",
+  [2] = 4,
+  [3] = 4
+}
+local gemsss = {
+  [1] = "Gems",
+  [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+  end)
+
+  local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Bunny Boss", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 5,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Boss Yeti", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 6,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Toy Boss", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 7,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Wanderer", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 8,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Yellow Hair Ninja", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 9,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Golden Asronaut Boss", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 10,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "IDK BOSS NAME LOCATION 11", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 11,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "IDK BOSS NAME LOCATION 12", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 12,
+    [3] = 4
+}
+local gemsss = {
+    [1] = "Gems",
+    [2] = 1
+}
+while _G.BuffNoob and task.wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoFight"):FireServer(unpack(noobie))
+game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServer(unpack(gemsss))
+end
+    end)
+
+    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Sell(owner) function", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+        _G.BuffNoob = enabled
+      local noobie = {
+    [1] = "Fight",
+    [2] = 9,
+    [3] = 1
 }
 local gemsss = {
     [1] = "Gems",
@@ -286,6 +535,18 @@ local Toggle = Tabs.eggs:AddToggle("MyToggle", {Title = "Auto Hatch IDK Egg", De
       }
       game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
     end
+end)
+local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Off proximity", Default = false })
+
+    Toggle:OnChanged(function(enabled)
+      _G.proxi = enabled
+      while _G.proxi and task.wait() do
+      for _, v in next, workspace:GetDescendants() do
+        if v:IsA("ProximityPrompt") then
+        v.HoldDuration = 0
+        end
+        end
+      end
 end)
 
     Tabs.script:AddButton({
