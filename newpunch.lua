@@ -711,6 +711,15 @@ Tabs.Teleport:AddButton({
     })
 
     Tabs.script:AddButton({
+      Title = "Keyboard script",
+      Description = "Very important button",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+          print("button pressed")
+      end
+  })
+
+    Tabs.script:AddButton({
         Title = "Redblue script",
         Description = "Very important button",
         Callback = function()
