@@ -19,18 +19,6 @@ local VirtualInputManager = game:GetService("VirtualInputManager")
 
 local noobuser = Players.LocalPlayer
 
-local parts = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
-
-local function autoClick(enabled, interval)
-  while enabled do
-    local x, y = 420, 420
-    VirtualInputManager:SendMouseButtonEvent(x, y, 0, false, game, 0)
-    VirtualInputManager:SendMouseButtonEvent(x, y, 0, true, game, 0)
-    
-    wait(interval)
-  end
-end
-
 local function fireEggs(count, delay, arg)
     local args = {
       [1] = tostring(arg) 
@@ -49,7 +37,7 @@ local Tabs = {
     eggs = Window:AddTab({ Title = "Eggs", Icon = "egg" }),
     boss = Window:AddTab({ Title = "Bosses", Icon = "minus-circle" }),
     script = Window:AddTab({ Title = "Another scripts", Icon = "code" }),
-    Teleport = Window:AddTab({ Title = "Teleports Zone", Icon = "antenna" }),
+    Teleport = Window:AddTab({ Title = "Teleports Zone", Icon = "shield" }),
     Beta = Window:AddTab({ Title = "Beta Functions pls dont use", Icon = "box" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
@@ -360,7 +348,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("CollectedCurrency"):FireServe
 end
     end)
 
-    local Toggle = Tabs.boss:AddToggle("MyToggle", {Title = "Sell(owner) function", Default = false })
+    local Toggle = Tabs.Beta:AddToggle("MyToggle", {Title = "Sell(owner) function", Default = false })
 
     Toggle:OnChanged(function(enabled)
         _G.BuffNoob = enabled
@@ -548,6 +536,170 @@ local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Off proximity", Default
         end
       end
 end)
+
+Tabs.Teleport:AddButton({
+  Title = "Forest (golden machine amd gem shop)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 1
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Desert (dungeons and blacksmith)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 2
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Cave (rainbow machine and merge)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 3
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Ocean (powercore and dangeons)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 4
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Candy zone (wishing well)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 5
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Snow (equipment shop and dangeons)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 6
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Toy Zone (hacker station)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 7
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Farm (miner)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 8
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "Samurai",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 9
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "IDK NAME ZONE(TP WORK)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 10
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "IDK NAME ZONE(TP WORK)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 11
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
+
+Tabs.Teleport:AddButton({
+  Title = "IDK NAME ZONE(TP WORK)",
+  Description = "teleport",
+  Callback = function()
+    local args = {
+      [1] = "Teleport",
+      [2] = 12
+  }
+  
+  game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TeleportEvent"):InvokeServer(unpack(args))
+  
+  end
+})
 
     Tabs.script:AddButton({
         Title = "ToraIsMe script",
