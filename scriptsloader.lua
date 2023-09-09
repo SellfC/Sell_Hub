@@ -22,8 +22,12 @@ local PlaceIds = {
 	["Ninjasim"] = { 13999740606 },
 	["ps"] = { 14236123211 },
 }
-if table.find(PlaceIds["ps"], Id) then -- Anime Adventures
-        LoadScript("punchpc.lua")
-elseif table.find(PlaceIds["Ninjasim"], Id) then -- RoGhoul
+if table.find(PlaceIds["ps"], Id) then -- Punch sim
+        if getgenv().AndroidScript then
+        LoadScript("punchandroid.lua")
+	else
+	LoadScript("punchpc.lua")
+	end
+elseif table.find(PlaceIds["Ninjasim"], Id) then -- Ninja Sim
 	LoadScript("Ninja.lua")
 end
