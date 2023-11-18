@@ -4,9 +4,9 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Fluent " .. Fluent.Version,
-    SubTitle = "by dawid",
+    SubTitle = "by sell.fr",
     TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
+    Size = UDim2.fromOffset(380, 260),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
@@ -15,6 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
+	Credits = Window:AddTab({ Title = "Main", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -23,9 +24,28 @@ local Options = Fluent.Options
 do
     Fluent:Notify({
         Title = "Notification",
-        Content = "This is a notification",
-        SubContent = "SubContent", -- Optional
+        Content = "Thank for useing my script!",
+        SubContent = "._.", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
+    })
+
+    Tabs.Credits:AddParagraph({
+        Title = "Information",
+        Content = "This script made by Sell.fr!!!!!.\nif you want, you can log in to our discord server (the button below)!"
+    })
+
+    Tabs.Credits:AddButton({
+        Title = "Click copy link discord server",
+        Description = "",
+        Callback = function()
+            setclipboard("https://discord.gg/gnDtRn7wbn")
+            Fluent:Notify({
+                Title = "Notification;)",
+                Content = "link was successfully copied",
+                SubContent = "TYSM", -- Optional
+                Duration = 5 -- Set to nil to make the notification not disappear
+            })
+        end
     })
 
     Tabs.Main:AddButton({
