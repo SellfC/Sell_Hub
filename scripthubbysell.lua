@@ -98,7 +98,7 @@ do
     })
 
 	Tabs.Main:AddButton({
-        Title = "Button",
+        Title = "LS-Zee-Hub-VIP",
         Description = "execute another script",
         Callback = function()
 			loadstring(game:HttpGet("https://link.trwxz.com/LS-Zee-Hub-VIP"))() 
