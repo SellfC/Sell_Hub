@@ -1,9 +1,10 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Sellhubver = "v2"
 
 local Window = Fluent:CreateWindow({
-    Title = "Fluent " .. Fluent.Version,
+    Title = "Sell_Hub" .. Sellhubver,
     SubTitle = "by sell.fr",
     TabWidth = 160,
     Size = UDim2.fromOffset(380, 260),
@@ -14,8 +15,8 @@ local Window = Fluent:CreateWindow({
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "" }),
-	Credits = Window:AddTab({ Title = "Main", Icon = "" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "apple" }),
+	Credits = Window:AddTab({ Title = "Credits", Icon = "bomb" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
