@@ -1,4 +1,4 @@
-local keys = loadstring(game:HttpGet("https://raw.githubusercontent.com/SellfC/Sell_Hub/main/keys.lua"))()
+local keys = "https://raw.githubusercontent.com/SellfC/Sell_Hub/main/keys.lua"
 
 if getgenv().key == keys then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SellfC/Sell_Hub/main/scripthubbysell.lua"))()
