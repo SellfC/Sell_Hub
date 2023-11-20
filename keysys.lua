@@ -3,6 +3,5 @@ local keys = {
 }
 
 if getgenv().key == keys then
-    print(getgenv().key)
     print("lox")
 end
