@@ -1,4 +1,4 @@
-local keys = loadstring(game:HttpGet("https://raw.githubusercontent.com/SellfC/Sell_Hub/main/keys.lua"))()
+local keys = loadstring(game:HttpGet("https://pastebin.com/raw/Va6zmbPk"))()
 local player = game.Players.LocalPlayer
 
 for i,v in pairs(keys) do 
