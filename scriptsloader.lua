@@ -32,8 +32,11 @@ if table.find(PlaceIds["ps"], Id) then -- Punch sim
 	end
 elseif table.find(PlaceIds["Ninjasim"], Id) then -- Ninja Sim
 	LoadScript("Ninja.lua")
+	print("script load")
 elseif table.find(PlaceIds["test"], Id) then -- Ninja Sim
 	LoadScript("scripthubbysell.lua")
+	print("script load")
 elseif table.find(PlaceIds["BF"], Id) then -- Ninja Sim
 	LoadScript("scripthubbysell.lua")
+	print("script load")
 end
