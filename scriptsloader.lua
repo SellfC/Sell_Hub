@@ -18,12 +18,14 @@ local function LoadScript(ScriptName)
 end
 local Id = game.PlaceId
 local GameId = game.GameId
+local player = game.Players.LocalPlayer
 local PlaceIds = {
 	["Ninjasim"] = { 13999740606 },
 	["ps"] = { 14236123211 },
-        ["BF"] = { 2753915549, 4442272183, 7449423635 },
-        ["testplace"] = { 4483381587 },
+    ["BF"] = { 2753915549, 4442272183, 7449423635 },
+    ["testplace"] = { 4483381587 },
 }
+
 if table.find(PlaceIds["ps"], Id) then -- Punch sim
         if getgenv().AndroidScript then
         LoadScript("punchandroid.lua")
