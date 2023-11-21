@@ -21,6 +21,8 @@ local GameId = game.GameId
 local PlaceIds = {
 	["Ninjasim"] = { 13999740606 },
 	["ps"] = { 14236123211 },
+        ["BF"] = { 2753915549, 4442272183, 7449423635 },
+        ["testplace"] = { 4483381587 },
 }
 if table.find(PlaceIds["ps"], Id) then -- Punch sim
         if getgenv().AndroidScript then
@@ -30,4 +32,8 @@ if table.find(PlaceIds["ps"], Id) then -- Punch sim
 	end
 elseif table.find(PlaceIds["Ninjasim"], Id) then -- Ninja Sim
 	LoadScript("Ninja.lua")
+elseif table.find(PlaceIds["test"], Id) then -- Ninja Sim
+	LoadScript("scripthubbysell.lua")
+elseif table.find(PlaceIds["BF"], Id) then -- Ninja Sim
+	LoadScript("scripthubbysell.lua")
 end
