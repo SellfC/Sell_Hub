@@ -51,7 +51,7 @@ _G.SupperFixLag = true
 
 _G["Use Webhook"] = {
     Enable = true,
-    Webhook = "https://discord.com/api/webhooks/1147253170037338182/jV6jCgP5atKz5m0lzAhJEJ9LVUuvwx4TJyt9YGo0nrOieHKudDEAtMKTtpJMSKw7Tinx",
+    Webhook = "https://discord.com/api/webhooks/1146111819040161803/-B0Lx9p47mBHPUL4gTMdOXpmirT-hPvlFqKZS9pC0hKHoIVcTaBKWp7_zxl9MT-B41e8",
 }
 
 _G["Farm Sea Events When AllDone"] = {
