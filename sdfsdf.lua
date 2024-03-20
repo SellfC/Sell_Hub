@@ -1,5 +1,4 @@
 repeat wait() until game:IsLoaded()
-getgenv().Key = "PREMIUM_VTAMF40IyCJxEYG"
 _G["Fumo Blox Fruit - HoHo Hub Kaitun V3"] = {
     MAIN_UI_COLOR = Color3.fromRGB(255, 165, 0), -- Color3.fromRGB(170, 85, 255)
     
