@@ -1,7 +1,3 @@
-getgenv().Executed = true
-while getgenv().Executed and task.wait(1000000000000) do 
-   print("VITALOK SOSET XUI")
-end
 
 print("execute")
 script_key = "GVnjEUyrpvmpjjywIGZWrdoRjnWSxZHP"
