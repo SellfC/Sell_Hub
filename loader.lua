@@ -42,7 +42,7 @@ elseif table.find(PlaceIds["testplace"], Id) then -- Ninja Sim
 elseif table.find(PlaceIds["BF"], Id) then -- Ninja Sim
 	LoadScript("w-azure.lua")
 	print("script load")
-elseif table.find(PlaceIds["BF"], Id) then -- Ninja Sim
+elseif table.find(PlaceIds["ttd"], Id) then -- Ninja Sim
 	LoadScript("tiolet.lua")
 	print("script load")
 end
