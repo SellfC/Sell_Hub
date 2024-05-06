@@ -95,7 +95,7 @@ _G.SwordSettings = { -- __________
     ['CursedDualKatana'] = true
 }
 _G.SharkAnchor_Settings = {
-    ["Enabled_Farm"] = true,
+    ["Enabled_Farm"] = false,
 }
 _G.GunSettings = { -- __________
     ['Kabucha'] = true,
