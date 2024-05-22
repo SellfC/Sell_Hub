@@ -6,9 +6,9 @@ repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
 _G.LogsDes = {
-    ["Enabled"] = true, -- _____________
-    ["SendAlias"] = true, -- __________ Alias
-    ["SendDescription"] = true, -- __________ Des
+    ["Enabled"] = false, -- _____________
+    ["SendAlias"] = false, -- __________ Alias
+    ["SendDescription"] = false, -- __________ Des
     ["DelaySend"] = 5 -- ______
 }
 _G.WebHook = {
@@ -19,8 +19,8 @@ _G.WebHook = {
 _G.MainSettings = {
         ["EnabledHOP"] = true, -- ____ HOP ( _______________________ )
         ['FPSBOOST'] = true, -- ______
-        ["FPSLOCKAMOUNT"] = 10, -- _____ FPS
-        ['WhiteScreen'] = true, -- _____
+        ["FPSLOCKAMOUNT"] = 30, -- _____ FPS
+        ['WhiteScreen'] = false, -- _____
         ['CloseUI'] = true, -- ___ Ui
         ["NotifycationExPRemove"] = true, -- __ ExP ________________
         ['AFKCheck'] = 150, -- _________________________________
@@ -31,7 +31,7 @@ _G.MainSettings = {
         }
     }
 _G.Fruits_Settings = { -- _________
-    ['Main_Fruits'] = {'Dough-Dough'}, -- ______ _________________________________________________
+    ['Main_Fruits'] = {'Dough-Dough', 'Kitsune-Kitsune'}, -- ______ _________________________________________________
     ['Select_Fruits'] = {"Buddha-Buddha", "Magma-Magma", "Rumble-Rumble", "Ice-Ice"} -- _____________________
 }
 _G.Quests_Settings = { -- ________________
