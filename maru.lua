@@ -26,12 +26,11 @@ _G.MainSettings = {
         ['AFKCheck'] = 150, -- _________________________________
         ["LockFragments"] = 20000, -- ____________
         ["LockFruitsRaid"] = { -- ______________________
-            [1] = "Dough-Dough",
-            [2] = "Kitsune-Kitsune"
+            [1] = "Dough-Dough"
         }
     }
 _G.Fruits_Settings = { -- _________
-    ['Main_Fruits'] = {'Dough-Dough', 'Kitsune-Kitsune'}, -- ______ _________________________________________________
+    ['Main_Fruits'] = {'Dough-Dough'}, -- ______ _________________________________________________
     ['Select_Fruits'] = {"Buddha-Buddha", "Magma-Magma", "Rumble-Rumble", "Ice-Ice"} -- _____________________
 }
 _G.Quests_Settings = { -- ________________
